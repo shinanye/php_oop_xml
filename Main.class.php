@@ -16,7 +16,7 @@ class Main{
         $ifSuccess = $isThat->checkData();
 
         if(!$ifSuccess["code"]){
-            Tool::alert($ifSuccess["msg"],"index.php?type=".$_GET["type"]);
+            Tool::alert($ifSuccess["msg"],"index.php?type=".$_GET["type"]);//弹出警告框--提示用户  页面跳转
         }else{
             Tool::alert($ifSuccess["msg"],"index.php?type=member");
         }

@@ -3,6 +3,7 @@ class Xml{
     private static $xmlInstance;
     private $xmlFilename;
     public $xml;
+    //heredoc字符串
     public $xmlContent = <<<XML
 <?xml version="1.0" encoding="utf-8"?>
 <root></root>

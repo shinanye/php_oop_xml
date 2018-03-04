@@ -11,13 +11,9 @@ class Login extends User{
         
         $xml = Xml::getXmlInstance();//xml替代数据库
         $xmlContent = $xml->xml->user;//回去xml/user.xml内容
-        print_r($xmlContent);
-        echo "<br>";
-        echo $xmlContent[0];
-        for($i=0;$i<count($xmlContent);$i++){
+
+        for($i=0;$i<count($xmlContent);$i++){//遍历xml文件
             $item=$xmlContent[$i];
-            
-            
             if($_POST["user"]==$item){
                 if($item["pwd"]==$_POST["pwd"]){
                     $returnArr = array(//密码、用户名正确
